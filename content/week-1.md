@@ -16,6 +16,8 @@ Please download this material for Monday's class:
 | **Coding exercises**          | [**pdf**](coding_exercises_1.pdf) |
 | **Customer churn data**  | [**Data**](customer_churn_data_cleaning.csv) |
 | **Cincy crimes data** | [**Data**](week1_cincy_crimes.csv) |
+| **Homework 1** | [**Data**](homework_1.pdf) |
+
 
 The focus of this week is two-fold:
 
