@@ -1,10 +1,21 @@
 ---
 layout: tutorial
 title: Week 1 (October 18)
-permalink: data_wrangling/week-1
 ---
 
 Welcome to week 1! Although we will not meet in class until the end of this week (Monday, October 18<sup>th</sup>), I do not want to waste time in getting started. We only have 7 weeks together (&#x1f622;) so I want to pack each week as full as possible. I am assuming you have fully read the syllabus by now but if not please do so that you understand how this class is structured and what is expected of you.  I will spend the first few minutes of class on Monday re-iterating a few points so that we are all on the same page but I do not want to spend 30-60 minutes doing so, so make sure you read (and re-read) it thoroughly.
+
+
+Please download this material for Monday's class:
+
+
+| Title                     | Handouts  |
+|:-------------------------:|--------------|
+| **Lecture 01-A**          | [**Slides**](01a_slides_BANA7025.pdf) |
+| **Lecture 01-B**          | [**Slides**](01b_slides_BANA7025.pdf) |
+| **Coding exercises**          | [**pdf**](coding_exercises_1.pdf) |
+| **Customer churn data**  | [**Data**](customer_churn_data_cleaning.csv) |
+| **Cincy crimes data** | [**Data**](week1_cincy_crimes.csv) |
 
 The focus of this week is two-fold:
 
@@ -23,7 +34,7 @@ First, get yourself (re-)introduced to R and the RStudio IDE by reading and comp
 ### Assignments
 
 - Complete Homework #1 located in this week's folder.
-- One person from each group will submit via *Canvas Discussions* the group's .R script and Word document.
+- One person from each group will submit via *Canvas* the group's .R script and Word document.
 - This homework assignment is due by 9AM, October 25, 2021.
 
 
@@ -35,18 +46,6 @@ First, get yourself (re-)introduced to R and the RStudio IDE by reading and comp
 
 
 <hr>
-
-## Class
-
-Please download this material for Monday's class:
-
-
-| Title                     | Handouts  |
-|:-------------------------:|--------------|
-| **Lecture 01-A**          | [**Link**]() |
-| **Lecture 01-B**          | [**Link**]() |
-
-
 
 See you in class on Monday!
 
