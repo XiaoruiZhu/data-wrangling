@@ -3,9 +3,10 @@ date: "2021-10-17 23:22:11"
 title: Schedule
 ---
 
+
 | Session       | Description  |
 |:-------------:|--------------|
-| **1**         | [**Introduction**](data_wrangling/week-1) &nbsp;&nbsp; <a href="https://xiaoruizhu.github.io/data-wrangling/week-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
+| **1**         | [**Introduction**](week-1) &nbsp;&nbsp; <a href="https://xiaoruizhu.github.io/data-wrangling/week-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 |               | Intro to data wrangling, R, and course outline  |
 |               | Base R |
 | **2**         | **Reproducible Documents and Importing Data** &nbsp;&nbsp; <a href="https://xiaoruizhu.github.io/data-wrangling/week-2" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
