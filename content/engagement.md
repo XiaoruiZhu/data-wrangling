@@ -1,7 +1,6 @@
 ---
 title: General Engagement Guidelines
-author: Brad Boehmke
-layout: tutorial
+author: Xiaorui Zhu
 ---
 
 10% of your grade will be determined by your level of engagement. Engagement will include participating in class discussions, small group projects, providing quality peer review of code, and being involved in discussions on Canvas. At the end of the term I will have all students perform a peer assessment of their small group members. This assessment will rate each member in several areas regarding:

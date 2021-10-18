@@ -7,26 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://xiaoruizhu.github.io/data-wrangling/data_wrangling/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-5-data/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-5-data/</guid>
-      <description>The following provides a short description of the variables in each data sets provided for week 5&amp;rsquo;s homework:
-Bomber data sets: These data provide the following information regarding the United States Air Force bomber aircraft:
- Type: Represents the type of aircraft. In this case, all aircraft in these data sets are United States Air Force bomber aircraft. MD: Represents the &amp;ldquo;Mission Design.&amp;rdquo; The letter represents the basic mission of the aircraft (B for bomber) and the number represents the design number.</description>
-    </item>
-    
-    <item>
-      <title>DataCamp Modules</title>
-      <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/datacamp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/datacamp/</guid>
-      <description>During the class term, you will have free access to Datacamp learning modules provided through the DataCamp for the Classroom initiative. I have selected specific modules that you will need to complete prior to each Saturday class at 1PM. I will track on-time, late, and missed completions of these modules. Instructions to access these modules will be emailed at the start of the course term.</description>
-    </item>
-    
-    <item>
       <title>Final Project</title>
       <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/final_project/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -37,62 +17,13 @@ Bomber data sets: These data provide the following information regarding the Uni
     </item>
     
     <item>
-      <title>Final Project</title>
-      <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/project/final_project_old/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/project/final_project_old/</guid>
-      <description>Purpose The purpose of this final project is to put to work the tools and knowledge that you gain throughout this course. This provides you with multiple benefits.
- It will provide you with more experience using data wrangling tools on real life data sets. It helps you become a self-directed learner. As a data scientist, a large part of your job is to self-direct your learning and interests to find unique and creative ways to find insights in data.</description>
-    </item>
-    
-    <item>
       <title>General Engagement Guidelines</title>
       <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/engagement/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/engagement/</guid>
-      <description>10% of your grade will be determined by your level of engagement. Engagement will include participating in class discussions, small group projects, providing quality peer review of code, and being involved in discussions on Slack. At the end of the term I will have all students perform a peer assessment of their small group members. This assessment will rate each member in several areas regarding:
+      <description>10% of your grade will be determined by your level of engagement. Engagement will include participating in class discussions, small group projects, providing quality peer review of code, and being involved in discussions on Canvas. At the end of the term I will have all students perform a peer assessment of their small group members. This assessment will rate each member in several areas regarding:
  Reviewing and providing constructive feedback regarding your code Engaging in quality discussions with the group to improve code knowledge Working well as a team member in the small group activities etc.</description>
-    </item>
-    
-    <item>
-      <title>General Homework Guidelines</title>
-      <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/homework/homework-guidelines/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/homework/homework-guidelines/</guid>
-      <description>Each week you will be assigned homework that will need to be completed prior to each Saturday session. These homework assignments will be crucial in helping you complete a high-quality final project. Each Saturday session your homework will be graded according to the following:   Present + homework complete (3 points)   Present + homework partially complete (2 points)   Present + no homework (1 point)  Absent (0 points)    Each Saturday your small group peers will review your homework code to provide feedback.</description>
-    </item>
-    
-    <item>
-      <title>General Homework Guidelines</title>
-      <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/homework/homework/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/homework/homework/</guid>
-      <description>Each week you will be assigned homework that will need to be completed prior to each Saturday session. These homework assignments will be crucial in helping you complete a high-quality final project. Each Saturday session your homework will be graded according to the following:
- Present + homework complete (3 points) Present + homework partially complete (2 points) Present + no homework (1 point) Absent (0 points)  Each Saturday your small group peers will review your homework code to provide feedback.</description>
-    </item>
-    
-    <item>
-      <title>Homework 1&amp;#58; Your First Markdown Experience</title>
-      <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/homework/homework-1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/homework/homework-1/</guid>
-      <description>The goal of this simple homework assignment is to get you familiar with the markdown language and producing the various R Markdown reports.
-This homework is due before class Saturday, October 22, 2016. There will be no flexibility on submission deadlines so if you have any software/technical issues we need to have these resolved by the end of class Satursday, October 15, 2016.
-Report to Create I want you to create an R Notebook (.</description>
-    </item>
-    
-    <item>
-      <title>Learn About the Data</title>
-      <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-3/about_the_data/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-3/about_the_data/</guid>
-      <description>Once you have a basic understanding of your source data from the codebook, and once you have imported the data, next you need to start learning the basics of your variables. To illustrate how we can get some basic insights from our data, I&amp;rsquo;ll illustrate with the built-in mtcars data set (remember, if you want to see the codebook for a built-in R data set such as mtcars just type ?</description>
     </item>
     
     <item>
@@ -106,90 +37,12 @@ Throughout the term you will progressively create your final project. Your mid-t
     </item>
     
     <item>
-      <title>Review the Codebook</title>
-      <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-3/codebook/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-3/codebook/</guid>
-      <description>A codebook is a technical description of the data that was collected for a particular purpose. It describes how the data are arranged in the computer file or files, what the various numbers and letters mean, and any special instructions on how to use the data properly. Like any other kind of &amp;ldquo;book,&amp;rdquo; some codebooks are better than others. The best codebooks have:
- Description of the study: who did it, why they did it, how they did it.</description>
-    </item>
-    
-    <item>
-      <title>The Role of Data Wrangling</title>
-      <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/why_wrangle/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/why_wrangle/</guid>
-      <description>&amp;ldquo;Water, water, everywhere, nor any a drop to drink&amp;rdquo; - Samuel Taylor Coleridge
- Synonymous to Samuel Taylor Coleridge&amp;rsquo;s quote in Rime of the Ancient Mariner, the degree to which data are useful is largely determined by an analysts ability to wrangle data. In spite of advances in technologies for working with data, analysts still spend an inordinate amount of time obtaining data, diagnosing data quality issues and pre-processing data into a usable form.</description>
-    </item>
-    
-    <item>
       <title>Week 1 (October 18)</title>
       <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-1/</guid>
       <description>Welcome to week 1! Although we will not meet in class until the end of this week (Monday, October 18th), I do not want to waste time in getting started. We only have 7 weeks together (😢) so I want to pack each week as full as possible. I am assuming you have fully read the syllabus by now but if not please do so that you understand how this class is structured and what is expected of you.</description>
-    </item>
-    
-    <item>
-      <title>Week 2 (March 14)</title>
-      <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-2/</guid>
-      <description>&amp;ldquo;What we have is a data glut.&amp;quot; - Vernon Vinge
- Data are being generated by everything around us at all times. Every digital process and social media exchange produces it. Systems, sensors and mobile devices transmit it. Countless databases collect it. Data are arriving from multiple sources at an alarming rate and analysts and organizations are seeking ways to leverage these new sources of information. Consequently, analysts need to understand how to get data from these data sources.</description>
-    </item>
-    
-    <item>
-      <title>Week 3 (March 28)</title>
-      <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-3/</guid>
-      <description>Last week we discussed general guidelines for first interacting with a new data set. This week we want to build on those activities by learning how to clean and tidy our data, and then beginning our journey to creating insights with data through data manipulation.
-Specifically, this week you are going to learn:
- How to make your data &amp;ldquo;tidy&amp;rdquo;. How to manipulate data to create insights from data.  Consequently, this week will give you a strong foundation for managing and cleaning your data.</description>
-    </item>
-    
-    <item>
-      <title>Week 4 (April 4)</title>
-      <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-4/</guid>
-      <description>This week builds onto our data wrangling skills by focusing on transforming and joining data. Common transformation procedures include filtering observations by their values, reordering the rows, selecting variables, creating new variables with functions of existing variables, and collapsing values down to single summary summary statistics (i.e. mean, max, variance).
-Furthermore, it’s rare that a data analysis involves only a single table of data. Typically you have many tables of data, and you must combine them to answer the questions that you’re interested in.</description>
-    </item>
-    
-    <item>
-      <title>Week 5 (April 11)</title>
-      <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-5/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-5/</guid>
-      <description>Being able to create visualizations (graphical representations) of data is a key step in data analysis. In this module you will learn to use the ggplot2 library to visualize your data. As illustrated in week 2, R does provide built-in plotting functions; however, the ggplot2 library implements what is known as the Grammar of Graphics. This makes it particularly effective for describing how visualizations should represent data, and has turned it into the preeminent plotting library in R.</description>
-    </item>
-    
-    <item>
-      <title>Week 6 (April 18)</title>
-      <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-6/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-6/</guid>
-      <description>Don&amp;rsquo;t repeat yourself (DRY) is a software development principle aimed at reducing repetition. Formulated by Andy Hunt and Dave Thomas in their book The Pragmatic Programmer, the DRY principle states that &amp;ldquo;every piece of knowledge must have a single, unambiguous, authoritative representation within a system.&amp;rdquo; This principle has been widely adopted to imply that you should not duplicate code. Although the principle was meant to be far grander than that, there&amp;rsquo;s plenty of merit behind this slight misinterpretation.</description>
-    </item>
-    
-    <item>
-      <title>Week 7 (April 21-27)</title>
-      <link>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-7/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaoruizhu.github.io/data-wrangling/data_wrangling/week-7/</guid>
-      <description>Now that you are equipped with powerful programming tools we can finally move into the world of applied modeling. You’ll use your new tools of data wrangling and programming to fit, analyze, and understand different applied modelling techniques. First, you will gain a basic understanding of discovering relationships across variables and using models for data exploration. Then you will learn about a few key machine learning algorithms for supervised and unsurpervised learning that every analyst should understand.</description>
     </item>
     
   </channel>

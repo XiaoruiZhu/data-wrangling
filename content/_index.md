@@ -56,7 +56,7 @@ All required classroom material will be provided in class or online. Any recomme
 
 | Session       | Description  |
 |:-------------:|--------------|
-| **1**         | [**Introduction**](data_wrangling/week-1) &nbsp;&nbsp; <a href="https://xiaoruizhu.github.io/data-wrangling/week-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
+| **1**         | [**Introduction**](week-1) &nbsp;&nbsp; <a href="https://xiaoruizhu.github.io/data-wrangling/week-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 |               | Intro to data wrangling, R, and course outline  |
 |               | Base R |
 | **2**         | **Reproducible Documents and Importing Data** &nbsp;&nbsp; <a href="https://xiaoruizhu.github.io/data-wrangling/week-2" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
@@ -83,9 +83,9 @@ All required classroom material will be provided in class or online. Any recomme
 Course grades will consist of: 
 
 - 20% Homework assignments (4 equally weighted assignments)
-- 20% [Mid-term Project Evaluation]()
-- 50% [Final Project]()
-- 10% [Engagement](data_wrangling/engagement)
+- 20% [Mid-term Project Evaluation](mid-term)
+- 50% [Final Project](final-project)
+- 10% [Engagement](engagement)
 - There will be no in-class final exam
 
 Final grades will be distributed according to the following cutoffs:
@@ -106,7 +106,6 @@ Final grades will be distributed according to the following cutoffs:
 We will use this software during the course. Plan on bringing a computer to each class meeting.
 
 * [R](https://cran.r-project.org/) and [RStudio](https://www.rstudio.com/) will be used to perform all programming activities, assignments, and the final project.  You can find details on how to download these [here](http://uc-r.github.io/basics#installation).
-* [Slack](https://slack.com/) will replace e-mail and Blackboard for our course. You will receive an invitation to the [UC Data Wrangling slack team](https://uc-data-wrangling.slack.com). You may wish to install one of the [apps](https://slack.com/downloads/osx). Here is an [introduction to Slack](https://vimeo.com/133692325) from one of Kris Shaffer’s courses (although this is a completely different course and slack team it provides a nice introduction that you might find useful).
 
 
 

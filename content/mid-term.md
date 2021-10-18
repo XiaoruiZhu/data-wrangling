@@ -1,84 +1,26 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.88.1" />
+---
+title: Mid-term Expectations
+author: Xiaorui Zhu
+---
 
+**You may work with one other person on the midterm and final projects if you wish.  Once you decide on working solo or as a pair, your decision remains for the rest of the course (i.e., you can't decide to work alone or join someone after submitting the midterm.** 
+<br>
+Please read the [final project page](final-project) before reading any further.
 
-<title>Mid-term Expectations - Data Wrangling with R</title>
-<meta property="og:title" content="Mid-term Expectations - Data Wrangling with R">
-
-
-  <link href='https://xiaoruizhu.github.io/data-wrangling/favicon.ico' rel='icon' type='image/x-icon'/>
-
-
-
+Throughout the term you will progressively create your final project.  Your mid-term project is to submit the work you have completed midway through the course for a progress evaluation, where you have fully completed standards 1.1-4.4 and 7.1-7.4 as shown below.  This progress check will allow your peers and me to provide you direction for final completion.  This mid-term report will be rendered as an R Markdown HTML product.  You will need to upload your HTML report to [RPubs](https://rpubs.com/) and then:
+- Send me the url via Teams in a private message.
+- Send your homework group members (not me) the same url via Canvas or Teams for feedback.  Group members should respond via Teams (a private message!) or e-mail to provide:
+  * Strengths
+  * Weaknesses
+  * How code looks and if it follows style guidelines
+  * Any ideas to assist/inspire
+  * Overall story cohesion
+  * A virtual high five
   
 
+Mid-term expectations, which are based on the [final project standards](final-project), are listed below:
 
 
-
-
-
-
-<link rel="stylesheet" href="/data-wrangling/css/fonts.css" media="all">
-<link rel="stylesheet" href="/data-wrangling/css/main.css" media="all">
-
-
-
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="header">
-        <nav class="nav">
-  <a href="/data-wrangling/" class="nav-logo">
-    <img src="/data-wrangling/images/logo.png"
-         width="50"
-         height="50"
-         alt="Logo">
-  </a>
-
-  <ul class="nav-links">
-    
-    <li><a href="/data-wrangling/schedule/">Schedule</a></li>
-    
-    <li><a href="https://homepages.uc.edu/~zhuxr/">Xiaorui Zhu</a></li>
-    
-  </ul>
-</nav>
-
-      </header>
-
-
-<main class="content" role="main">
-
-  <article class="article">
-    
-
-    <h1 class="article-title">Mid-term Expectations</h1>
-
-    
-
-    <div class="article-content">
-      <p><strong>You may work with one other person on the midterm and final projects if you wish.  Once you decide on working solo or as a pair, your decision remains for the rest of the course (i.e., you can&rsquo;t decide to work alone or join someone after submitting the midterm.</strong> 
-<br>
-Please read the <a href="final-project">final project page</a> before reading any further.</p>
-<p>Throughout the term you will progressively create your final project.  Your mid-term project is to submit the work you have completed midway through the course for a progress evaluation, where you have fully completed standards 1.1-4.4 and 7.1-7.4 as shown below.  This progress check will allow your peers and me to provide you direction for final completion.  This mid-term report will be rendered as an R Markdown HTML product.  You will need to upload your HTML report to <a href="https://rpubs.com/">RPubs</a> and then:</p>
-<ul>
-<li>Send me the url via Teams in a private message.</li>
-<li>Send your homework group members (not me) the same url via Canvas or Teams for feedback.  Group members should respond via Teams (a private message!) or e-mail to provide:
-<ul>
-<li>Strengths</li>
-<li>Weaknesses</li>
-<li>How code looks and if it follows style guidelines</li>
-<li>Any ideas to assist/inspire</li>
-<li>Overall story cohesion</li>
-<li>A virtual high five</li>
-</ul>
-</li>
-</ul>
-<p>Mid-term expectations, which are based on the <a href="final-project">final project standards</a>, are listed below:</p>
 <div id="final-project-rubric" class="section level1" style="width: 120%;">
 <table style="font-size:13px;">
 <col width="15%">
@@ -150,43 +92,3 @@ Please read the <a href="final-project">final project page</a> before reading an
   <em>Due no later than: Saturday, April 4, 2020, 12:50PM ET</em>
 </p>
 </div>
-
-    </div>
-  </article>
-
-  
-
-
-</main>
-
-      <footer class="footer">
-        <ul class="footer-links">
-          <li>
-            <a href="/data-wrangling/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
-          </li>
-          <li>
-            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/data-wrangling/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
-          </li>
-        </ul>
-      </footer>
-
-    </div>
-    
-
-    
-
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-242S1L7JCL"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-242S1L7JCL', { 'anonymize_ip': false });
-}
-</script>
-
-  </body>
-</html>
-
