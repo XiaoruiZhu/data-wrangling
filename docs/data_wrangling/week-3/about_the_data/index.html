@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.88.1" />
+
+
+<title>Learn About the Data - Data Wrangling with R</title>
+<meta property="og:title" content="Learn About the Data - Data Wrangling with R">
+
+
+  <link href='https://xiaoruizhu.github.io/data-wrangling/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/data-wrangling/css/fonts.css" media="all">
+<link rel="stylesheet" href="/data-wrangling/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/data-wrangling/" class="nav-logo">
+    <img src="/data-wrangling/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/data-wrangling/schedule/">Schedule</a></li>
+    
+    <li><a href="https://homepages.uc.edu/~zhuxr/">Xiaorui Zhu</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+
+    <h1 class="article-title">Learn About the Data</h1>
+
+    
+
+    <div class="article-content">
+      <p>Once you have a basic understanding of your source data from the codebook, and once you have imported the data, next you need to start learning the basics of your variables.  To illustrate how we can get some basic insights from our data, I&rsquo;ll illustrate with the built-in <code>mtcars</code> data set (remember, if you want to see the codebook for a built-in R data set such as <code>mtcars</code> just type <code>?mtcars</code> in the console).</p>
+<h2 id="dimensions-and-attributes">Dimensions and Attributes</h2>
+<p>Some of the first things we want to understand are the dimensions of our data (number of variables and number of observations):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># number of variables</span>
+<span style="color:#a6e22e">ncol</span>(mtcars)
+<span style="color:#75715e">## [1] 11</span>
+
+<span style="color:#75715e"># number of rows</span>
+<span style="color:#a6e22e">nrow</span>(mtcars)
+<span style="color:#75715e">## [1] 32</span>
+
+<span style="color:#75715e"># number of rows and variables</span>
+<span style="color:#a6e22e">dim</span>(mtcars)
+<span style="color:#75715e">## [1] 32 11</span>
+</code></pre></div><p>We also want to understand the names of our columns so we can link them back to the codebook and understand the variables we are dealing with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># names of variables</span>
+<span style="color:#a6e22e">names</span>(mtcars)
+<span style="color:#75715e">##  [1] &#34;mpg&#34;  &#34;cyl&#34;  &#34;disp&#34; &#34;hp&#34;   &#34;drat&#34; &#34;wt&#34;   &#34;qsec&#34; &#34;vs&#34;   &#34;am&#34;   &#34;gear&#34;</span>
+<span style="color:#75715e">## [11] &#34;carb&#34;</span>
+</code></pre></div><p>Sometimes the data we are working with also have row names.  Personally, I believe that if row names are meaningful then they should be a variable in-themselves but that is not always the case for an initial data set we are provided.  We can check for row names with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">row.names</span>(mtcars)
+<span style="color:#75715e">##  [1] &#34;Mazda RX4&#34;           &#34;Mazda RX4 Wag&#34;       &#34;Datsun 710&#34;         </span>
+<span style="color:#75715e">##  [4] &#34;Hornet 4 Drive&#34;      &#34;Hornet Sportabout&#34;   &#34;Valiant&#34;            </span>
+<span style="color:#75715e">##  [7] &#34;Duster 360&#34;          &#34;Merc 240D&#34;           &#34;Merc 230&#34;           </span>
+<span style="color:#75715e">## [10] &#34;Merc 280&#34;            &#34;Merc 280C&#34;           &#34;Merc 450SE&#34;         </span>
+<span style="color:#75715e">## [13] &#34;Merc 450SL&#34;          &#34;Merc 450SLC&#34;         &#34;Cadillac Fleetwood&#34; </span>
+<span style="color:#75715e">## [16] &#34;Lincoln Continental&#34; &#34;Chrysler Imperial&#34;   &#34;Fiat 128&#34;           </span>
+<span style="color:#75715e">## [19] &#34;Honda Civic&#34;         &#34;Toyota Corolla&#34;      &#34;Toyota Corona&#34;      </span>
+<span style="color:#75715e">## [22] &#34;Dodge Challenger&#34;    &#34;AMC Javelin&#34;         &#34;Camaro Z28&#34;         </span>
+<span style="color:#75715e">## [25] &#34;Pontiac Firebird&#34;    &#34;Fiat X1-9&#34;           &#34;Porsche 914-2&#34;      </span>
+<span style="color:#75715e">## [28] &#34;Lotus Europa&#34;        &#34;Ford Pantera L&#34;      &#34;Ferrari Dino&#34;       </span>
+<span style="color:#75715e">## [31] &#34;Maserati Bora&#34;       &#34;Volvo 142E&#34;</span>
+</code></pre></div><p>Column (variable) and row names are considered attributes of our data.  Sometimes there are additional meta-data (comments, descriptions, etc.) embedded in our data set.  We can get all this information quickly by using <code>attributes()</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">attributes</span>(mtcars)
+<span style="color:#75715e">## $names</span>
+<span style="color:#75715e">##  [1] &#34;mpg&#34;  &#34;cyl&#34;  &#34;disp&#34; &#34;hp&#34;   &#34;drat&#34; &#34;wt&#34;   &#34;qsec&#34; &#34;vs&#34;   &#34;am&#34;   &#34;gear&#34;</span>
+<span style="color:#75715e">## [11] &#34;carb&#34;</span>
+<span style="color:#75715e">## </span>
+<span style="color:#75715e">## $row.names</span>
+<span style="color:#75715e">##  [1] &#34;Mazda RX4&#34;           &#34;Mazda RX4 Wag&#34;       &#34;Datsun 710&#34;         </span>
+<span style="color:#75715e">##  [4] &#34;Hornet 4 Drive&#34;      &#34;Hornet Sportabout&#34;   &#34;Valiant&#34;            </span>
+<span style="color:#75715e">##  [7] &#34;Duster 360&#34;          &#34;Merc 240D&#34;           &#34;Merc 230&#34;           </span>
+<span style="color:#75715e">## [10] &#34;Merc 280&#34;            &#34;Merc 280C&#34;           &#34;Merc 450SE&#34;         </span>
+<span style="color:#75715e">## [13] &#34;Merc 450SL&#34;          &#34;Merc 450SLC&#34;         &#34;Cadillac Fleetwood&#34; </span>
+<span style="color:#75715e">## [16] &#34;Lincoln Continental&#34; &#34;Chrysler Imperial&#34;   &#34;Fiat 128&#34;           </span>
+<span style="color:#75715e">## [19] &#34;Honda Civic&#34;         &#34;Toyota Corolla&#34;      &#34;Toyota Corona&#34;      </span>
+<span style="color:#75715e">## [22] &#34;Dodge Challenger&#34;    &#34;AMC Javelin&#34;         &#34;Camaro Z28&#34;         </span>
+<span style="color:#75715e">## [25] &#34;Pontiac Firebird&#34;    &#34;Fiat X1-9&#34;           &#34;Porsche 914-2&#34;      </span>
+<span style="color:#75715e">## [28] &#34;Lotus Europa&#34;        &#34;Ford Pantera L&#34;      &#34;Ferrari Dino&#34;       </span>
+<span style="color:#75715e">## [31] &#34;Maserati Bora&#34;       &#34;Volvo 142E&#34;         </span>
+<span style="color:#75715e">## </span>
+<span style="color:#75715e">## $class</span>
+<span style="color:#75715e">## [1] &#34;data.frame&#34;</span>
+</code></pre></div><br>
+<h2 id="viewing-our-data">Viewing our Data</h2>
+<p>For a large data set this can sometimes produce quite a lengthy list.  Sometimes we just want to check out our data in a spreadsheet view.  We can do this using <code>View()</code>.  Go ahead and type the following in your console:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">View</span>(mtcars)
+</code></pre></div><p>We may also want to check out the first or last <em>n</em> rows of the data set. We can do this with <code>head()</code> and <code>tail()</code>, which defaults to looking at the first or last 6 rows but we can adjust this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># by default head() will display the first 6 rows</span>
+<span style="color:#a6e22e">head</span>(mtcars)
+<span style="color:#75715e">##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb</span>
+<span style="color:#75715e">## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4</span>
+<span style="color:#75715e">## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4</span>
+<span style="color:#75715e">## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1</span>
+<span style="color:#75715e">## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1</span>
+<span style="color:#75715e">## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2</span>
+<span style="color:#75715e">## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</span>
+
+
+<span style="color:#75715e"># look at the last 10 rows</span>
+<span style="color:#a6e22e">tail</span>(mtcars, <span style="color:#ae81ff">10</span>)
+<span style="color:#75715e">##                   mpg cyl  disp  hp drat    wt  qsec vs am gear carb</span>
+<span style="color:#75715e">## AMC Javelin      15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2</span>
+<span style="color:#75715e">## Camaro Z28       13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4</span>
+<span style="color:#75715e">## Pontiac Firebird 19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2</span>
+<span style="color:#75715e">## Fiat X1-9        27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1</span>
+<span style="color:#75715e">## Porsche 914-2    26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2</span>
+<span style="color:#75715e">## Lotus Europa     30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2</span>
+<span style="color:#75715e">## Ford Pantera L   15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4</span>
+<span style="color:#75715e">## Ferrari Dino     19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6</span>
+<span style="color:#75715e">## Maserati Bora    15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8</span>
+<span style="color:#75715e">## Volvo 142E       21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2</span>
+</code></pre></div><br>
+<h2 id="data-types">Data Types</h2>
+<p>We also want to know what type of data each variable is recorded as.  We will learn more about how to manage data types (i.e. <a href="numbers">numeric</a>, <a href="characters">character</a>, <a href="factors">factors</a>, and <a href="dates">dates</a>) later in the class; however, right now you just want to understand what type of data you are working with. We can do this a couple ways but one of the easiest ways is to use the <code>str()</code> function, which displays the <strong>str</strong>ucture of the data. <code>str()</code> is very convenient because it will also provide the number of observations, number of variables, the name of each variable, the type of data each variable is, and will also display the first several observations to give you a taste of the data.  In this example all variables are numeric (indicated by &ldquo;num&rdquo; listed after the variable names).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">str</span>(mtcars)
+<span style="color:#75715e">## &#39;data.frame&#39;:	32 obs. of  11 variables:</span>
+<span style="color:#75715e">##  $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...</span>
+<span style="color:#75715e">##  $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...</span>
+<span style="color:#75715e">##  $ disp: num  160 160 108 258 360 ...</span>
+<span style="color:#75715e">##  $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...</span>
+<span style="color:#75715e">##  $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...</span>
+<span style="color:#75715e">##  $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...</span>
+<span style="color:#75715e">##  $ qsec: num  16.5 17 18.6 19.4 17 ...</span>
+<span style="color:#75715e">##  $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...</span>
+<span style="color:#75715e">##  $ am  : num  1 1 1 0 0 0 0 0 0 0 ...</span>
+<span style="color:#75715e">##  $ gear: num  4 4 4 3 3 3 3 4 4 4 ...</span>
+<span style="color:#75715e">##  $ carb: num  4 4 1 1 2 1 4 2 2 4 ...</span>
+</code></pre></div><p>However, you may notice something. According to the codebook (<code>?mtcars</code>) the <em>cyl</em>, <em>vs</em>, <em>gear</em>, and <em>carb</em> are not necessarily continuous variables. These variables are <em>categorical</em> variables (we&rsquo;ll get into this more later in the class) where:</p>
+<ul>
+<li><code>cyl</code> is the number of cylinders (4 , 6, or 8)</li>
+<li><code>vs</code> represents a V-engine (0) or straight engine (1)</li>
+<li><code>gear</code> is the number of gears (3, 4, or 5)</li>
+<li><code>carb</code> is the number of carburetors (1, 2, 3, 4, 6, or 8)</li>
+</ul>
+<p>We can change variable types using the suite of <code>as.</code> functions (<code>as.character</code>, <code>as.integer</code>, <code>as.factor</code>, etc.). In R, categorical variables are considered &ldquo;factors&rdquo; so to change these variables to factors we simply apply the <code>as.factor()</code> function.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># change variables from numerics to factors</span>
+mtcars<span style="color:#f92672">$</span>cyl <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.factor</span>(mtcars<span style="color:#f92672">$</span>cyl)
+mtcars<span style="color:#f92672">$</span>vs <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.factor</span>(mtcars<span style="color:#f92672">$</span>vs)
+mtcars<span style="color:#f92672">$</span>gear <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.factor</span>(mtcars<span style="color:#f92672">$</span>gear)
+mtcars<span style="color:#f92672">$</span>carb <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.factor</span>(mtcars<span style="color:#f92672">$</span>carb)
+</code></pre></div><p>Now when we look at the structure of our <code>mtcars</code> data we see that <em>cyl</em>, <em>vs</em>, <em>gear</em>, and <em>carb</em> are recorded as factors.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">str</span>(mtcars)
+<span style="color:#75715e">## &#39;data.frame&#39;:	32 obs. of  11 variables:</span>
+<span style="color:#75715e">##  $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...</span>
+<span style="color:#75715e">##  $ cyl : Factor w/ 3 levels &#34;4&#34;,&#34;6&#34;,&#34;8&#34;: 2 2 1 2 3 2 3 1 1 2 ...</span>
+<span style="color:#75715e">##  $ disp: num  160 160 108 258 360 ...</span>
+<span style="color:#75715e">##  $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...</span>
+<span style="color:#75715e">##  $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...</span>
+<span style="color:#75715e">##  $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...</span>
+<span style="color:#75715e">##  $ qsec: num  16.5 17 18.6 19.4 17 ...</span>
+<span style="color:#75715e">##  $ vs  : Factor w/ 2 levels &#34;0&#34;,&#34;1&#34;: 1 1 2 2 1 2 1 2 2 2 ...</span>
+<span style="color:#75715e">##  $ am  : num  1 1 1 0 0 0 0 0 0 0 ...</span>
+<span style="color:#75715e">##  $ gear: Factor w/ 3 levels &#34;3&#34;,&#34;4&#34;,&#34;5&#34;: 2 2 2 1 1 1 1 2 2 2 ...</span>
+<span style="color:#75715e">##  $ carb: Factor w/ 6 levels &#34;1&#34;,&#34;2&#34;,&#34;3&#34;,&#34;4&#34;,..: 4 4 1 1 2 1 4 2 2 4 ...</span>
+</code></pre></div><p>We can also apply the <code>class()</code> function to get the type of data for a specific variable.  Here I get the type of data that the <em>cyl</em> variable of the <code>mtcars</code> data sset is.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">class</span>(mtcars<span style="color:#f92672">$</span>cyl)
+<span style="color:#75715e">## [1] &#34;factor&#34;</span>
+</code></pre></div><p>Now, a simple trick is to apply this <code>class</code> function iteratively over each column of our data set.  We can use the <code>sapply()</code> function to do this.  We simply supply the data set we want to iterate over and then the function we want to apply to each variable:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">sapply</span>(mtcars, class)
+<span style="color:#75715e">##       mpg       cyl      disp        hp      drat        wt      qsec </span>
+<span style="color:#75715e">## &#34;numeric&#34;  &#34;factor&#34; &#34;numeric&#34; &#34;numeric&#34; &#34;numeric&#34; &#34;numeric&#34; &#34;numeric&#34; </span>
+<span style="color:#75715e">##        vs        am      gear      carb </span>
+<span style="color:#75715e">##  &#34;factor&#34; &#34;numeric&#34;  &#34;factor&#34;  &#34;factor&#34;</span>
+</code></pre></div><p>Don&rsquo;t worry, you will learn more about iteration functions later in the course.</p>
+<br>
+<h2 id="missing-data">Missing Data</h2>
+<p>Next, before we start looking at statistical summaries of the data, we want to understand if we have any missing observations.  The <code>is.na()</code> function will return TRUE or FALSE for each cell in the <code>mtcars</code> data frame stating whether or not it is a missing value. This allows us to identify how many missing values are in our data by wrapping <code>is.na()</code> with <code>sum()</code> (in R TRUE = 1 and FALSE = 0):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># get the count of missing values in the data set</span>
+<span style="color:#a6e22e">sum</span>(<span style="color:#a6e22e">is.na</span>(mtcars))
+<span style="color:#75715e">## [1] 0</span>
+</code></pre></div><p>In this example we have no missing values. However, if we did have missing values we may want to recode or omit them.  To manage missing values read the short tutorial on <em><a href="http://uc-r.github.io/missing_values">Dealing with missing values</a></em>.</p>
+<br>
+<h2 id="basic-descriptive-statistics">Basic Descriptive Statistics</h2>
+<p>Ok, so now we should have a pretty good understanding of the basic structure of our data. Next, we need to start understanding some descriptive statistics of our data. Descriptive statistics are the first pieces of information used to understand and represent a data set. The goal, in essence, is to describe the main features of numerical and categorical information with simple summaries. These summaries can be presented with a single numeric measure, frequency distributions, using summary tables, etc.</p>
+<p>A simple approach to get basic summary statistics for all the variables in a data set is to use <code>summary</code>.  This provides the minimum, 1st quantile, median, mean, 3rd quantile, and maximum summary measures.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">summary</span>(mtcars)
+<span style="color:#75715e">##      mpg        cyl         disp             hp             drat             wt             qsec       vs           am         gear   carb  </span>
+<span style="color:#75715e">## Min.   :10.40   4:11   Min.   : 71.1   Min.   : 52.0   Min.   :2.760   Min.   :1.513   Min.   :14.50   0:18   Min.   :0.0000   3:15   1: 7  </span>
+<span style="color:#75715e">## 1st Qu.:15.43   6: 7   1st Qu.:120.8   1st Qu.: 96.5   1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1:14   1st Qu.:0.0000   4:12   2:10  </span>
+<span style="color:#75715e">## Median :19.20   8:14   Median :196.3   Median :123.0   Median :3.695   Median :3.325   Median :17.71          Median :0.0000   5: 5   3: 3  </span>
+<span style="color:#75715e">## Mean   :20.09          Mean   :230.7   Mean   :146.7   Mean   :3.597   Mean   :3.217   Mean   :17.85          Mean   :0.4062          4:10  </span>
+<span style="color:#75715e">## 3rd Qu.:22.80          3rd Qu.:326.0   3rd Qu.:180.0   3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90          3rd Qu.:1.0000          6: 1  </span>
+<span style="color:#75715e">## Max.   :33.90          Max.   :472.0   Max.   :335.0   Max.   :4.930   Max.   :5.424   Max.   :22.90          Max.   :1.0000          8: 1  </span>
+</code></pre></div><p>We may also want to look more closely at individual variables to get a better understanding of them.  Here, I illustrate the most common forms of descriptive statistics for <a href="#numerical">numerical</a> and <a href="#categorical">categorical</a> variables but keep in mind there are numerous ways to describe and illustrate key features of data.</p>
+<h3 id="numerical">Numerical Data</h3>
+<h4 id="central">Central Tendency</h4>
+<p>There are three common measures of central tendency, all of which try to answer the basic question of which value is the most “typical.” These are the mean (average of all observations), median (middle observation), and mode (appears most often). Each of these measures can be calculated for an individual variable or across all variables in a particular data frame.  For example, if we are interested in finding the central tendency measures for the <em>mpg</em> variable we can employ the following (note that when you use <code>mtcars$mpg</code> you are selecting the mpg variable from the mtcars data set):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">mean</span>(mtcars<span style="color:#f92672">$</span>mpg)
+<span style="color:#75715e">## [1] 20.09062</span>
+<span style="color:#a6e22e">median</span>(mtcars<span style="color:#f92672">$</span>mpg)
+<span style="color:#75715e">## [1] 19.2</span>
+</code></pre></div><p>Unfortunately, there is not a built-in function to compute the mode of a variable[^mode]. However, we can create a function that takes the vector as an input and gives the mode value as an output.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">get_mode <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(v) {
+  unique_value <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">unique</span>(v)
+  unique_value<span style="color:#a6e22e">[which.max</span>(<span style="color:#a6e22e">tabulate</span>(<span style="color:#a6e22e">match</span>(v, unique_value)))]
+}
+
+<span style="color:#a6e22e">get_mode</span>(mtcars<span style="color:#f92672">$</span>mpg)
+<span style="color:#75715e">## [1] 21</span>
+</code></pre></div><h4 id="variance">Variability</h4>
+<p>The central tendencies give you a sense of the <em>most likely</em> values (mpg in this case) but do not provide you with information on the variability of the values. Variability can be summarized in different ways, each providing you unique understanding of how the values are spread out.</p>
+<h5 id="range">Range</h5>
+<p>The range is a fairly crude measure of variability, defining the maximum and minimum values and the difference thereof. We can compute range summaries with the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># get the minimum value</span>
+<span style="color:#a6e22e">min</span>(mtcars<span style="color:#f92672">$</span>mpg)
+<span style="color:#75715e">## [1] 10.4</span>
+
+<span style="color:#75715e"># get the maximum value</span>
+<span style="color:#a6e22e">max</span>(mtcars<span style="color:#f92672">$</span>mpg)
+<span style="color:#75715e">## [1] 33.9</span>
+
+<span style="color:#75715e"># get both the min and max values</span>
+<span style="color:#a6e22e">range</span>(mtcars<span style="color:#f92672">$</span>mpg)
+<span style="color:#75715e">## [1] 10.4 33.9</span>
+
+<span style="color:#75715e"># compute the spread between min &amp; max values</span>
+<span style="color:#a6e22e">max</span>(mtcars<span style="color:#f92672">$</span>mpg) <span style="color:#f92672">-</span> <span style="color:#a6e22e">min</span>(mtcars<span style="color:#f92672">$</span>mpg)
+<span style="color:#75715e">## [1] 23.5</span>
+</code></pre></div><h5 id="percentiles">Percentiles</h5>
+<p>Given a certain percentage such as 25%, what is the mpg value such that 25% of the <code>mtcars</code> observations fall below it? This type of question leads to <u>percentiles</u> and <u>quartiles</u>. Specifically, for any percentage <em>p</em>, the <em>p</em>th percentile is the value such that a percentage <em>p</em> of all values are less than it. Similarly, the first, second, and third quartiles are the percentiles corresponding to $$p=25%$$, $$p=50%$$, and $$p=75%$$. These three values divide the data into four groups, each with (approximately) a quarter of all observations. Note that the second quartile is equal to the median by definition. These measures are easily computed in R:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># fivenum() function provides min, 25%, 50% (median), 75%, and max</span>
+<span style="color:#a6e22e">fivenum</span>(mtcars<span style="color:#f92672">$</span>mpg)
+<span style="color:#75715e">## [1] 10.40 15.35 19.20 22.80 33.90</span>
+
+<span style="color:#75715e"># default quantile() percentiles are 0%, 25%, 50%, 75%, and 100% </span>
+<span style="color:#75715e"># provides same output as fivenum()</span>
+<span style="color:#a6e22e">quantile</span>(mtcars<span style="color:#f92672">$</span>mpg)
+<span style="color:#75715e">##     0%    25%    50%    75%   100% </span>
+<span style="color:#75715e">## 10.400 15.425 19.200 22.800 33.900</span>
+
+<span style="color:#75715e"># we can customize quantile() for specific percentiles</span>
+<span style="color:#a6e22e">quantile</span>(mtcars<span style="color:#f92672">$</span>mpg, probs <span style="color:#f92672">=</span> <span style="color:#a6e22e">seq</span>(from <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, to <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, by <span style="color:#f92672">=</span> <span style="color:#ae81ff">.1</span>))
+<span style="color:#75715e">##    0%   10%   20%   30%   40%   50%   60%   70%   80%   90%  100% </span>
+<span style="color:#75715e">## 10.40 14.34 15.20 15.98 17.92 19.20 21.00 21.47 24.08 30.09 33.90</span>
+
+<span style="color:#75715e"># we can quickly compute the difference between the 1st and 3rd quantile</span>
+<span style="color:#a6e22e">IQR</span>(mtcars<span style="color:#f92672">$</span>mpg)
+<span style="color:#75715e">## [1] 7.375</span>
+</code></pre></div><p>An alternative approach is to use the <code>summary</code> function directly on the individual variable:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">summary</span>(mtcars<span style="color:#f92672">$</span>mpg)
+<span style="color:#75715e">##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
+<span style="color:#75715e">##   10.40   15.43   19.20   20.09   22.80   33.90</span>
+</code></pre></div><h5 id="variance-1">Variance</h5>
+<p>Although the range provides a crude measure of variability and percentiles/quartiles provide an understanding of divisions of the data, the most common measures to summarize variability are variance and its derivatives (standard deviation and mean/median absolute deviation). We can compute each of these as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># variance</span>
+<span style="color:#a6e22e">var</span>(mtcars<span style="color:#f92672">$</span>mpg)
+<span style="color:#75715e">## [1] 36.3241</span>
+
+<span style="color:#75715e"># standard deviation</span>
+<span style="color:#a6e22e">sd</span>(mtcars<span style="color:#f92672">$</span>mpg)
+<span style="color:#75715e">## [1] 6.026948</span>
+
+<span style="color:#75715e"># mean absolute deviation</span>
+<span style="color:#a6e22e">mad</span>(mtcars<span style="color:#f92672">$</span>mpg, center <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(mtcars<span style="color:#f92672">$</span>mpg))
+<span style="color:#75715e">## [1] 6.37518</span>
+
+<span style="color:#75715e"># median absolute deviation - note that the center argument defaults to median</span>
+<span style="color:#75715e"># so it does not need to be specified, although I do just be clear</span>
+<span style="color:#a6e22e">mad</span>(mtcars<span style="color:#f92672">$</span>mpg, center <span style="color:#f92672">=</span> <span style="color:#a6e22e">median</span>(mtcars<span style="color:#f92672">$</span>mpg))
+<span style="color:#75715e">## [1] 5.41149</span>
+</code></pre></div><h5 id="shape">Shape</h5>
+<p>Two additional measures of a distribution that you will hear occasionally include skewness and kurtosis. Skewness is a measure of symmetry for a distribution. Negative values represent a <em>left-skewed</em> distribution where there are more extreme values to the left causing the mean to be less than the median. Positive values represent a <em>right-skewed</em> distribution where there are more extreme values to the right causing the mean to be more than the median.</p>
+<p>Kurtosis is a measure of peakedness for a distribution. Negative values indicate a flat (platykurtic) distribution, positive values indicate a peaked (leptokurtic) distribution, and a value near 3 indicates a normal (mesokurtic) distribution.</p>
+<p>We can get both skewness and kurtosis values using the <code>moments</code> package.  Here, since our skewness is positive we can tell monthly card expenditures is right-skewed and since the kurtosis is much greater than 3 this suggests a very peaked distribution.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(moments)
+
+<span style="color:#a6e22e">skewness</span>(mtcars<span style="color:#f92672">$</span>mpg)
+<span style="color:#75715e">## [1] 0.6404399</span>
+<span style="color:#a6e22e">kurtosis</span>(mtcars<span style="color:#f92672">$</span>mpg)
+<span style="color:#75715e">## [1] 2.799467</span>
+</code></pre></div><h4 id="outliers">Outliers</h4>
+<p>Outliers in data can distort predictions and affect their accuracy. Consequently, its important to understand if outliers are present and, if so, which observations are considered outliers. The <code>outliers</code> package provides a number of useful functions to systematically extract outliers. The functions of most use are <code>outlier()</code> and <code>scores()</code>. The <code>outlier</code> function gets the most extreme observation from the mean. The <code>scores</code> function computes the normalized (<em>z</em>, <em>t</em>, <em>chisq</em>, etc.) score which you can use to find observation(s) that lie beyond a given value.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(outliers)
+
+<span style="color:#75715e"># gets most extreme right-tail observation (same as max)</span>
+<span style="color:#a6e22e">outlier</span>(mtcars<span style="color:#f92672">$</span>mpg)
+
+<span style="color:#75715e"># gets most extreme left-tail observation (same as min)</span>
+<span style="color:#a6e22e">outlier</span>(mtcars<span style="color:#f92672">$</span>mpg, opposite <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+
+<span style="color:#75715e"># observations that are outliers based on z-scores greater than 2. In other </span>
+<span style="color:#75715e"># words, these observations exceed 2 standard deviations from the mean.</span>
+z_scores <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">scores</span>(mtcars<span style="color:#f92672">$</span>mpg, type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;z&#34;</span>)
+<span style="color:#a6e22e">which</span>(<span style="color:#a6e22e">abs</span>(z_scores) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>)
+
+<span style="color:#75715e"># outliers based on values less than or greater than the &#34;whiskers&#34; on a </span>
+<span style="color:#75715e"># boxplot (1.5 x IQR or more below 1st quartile or above 3rd quartile)</span>
+<span style="color:#a6e22e">which</span>(<span style="color:#a6e22e">scores</span>(mtcars<span style="color:#f92672">$</span>mpg, type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;iqr&#34;</span>, lim <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.5</span>))
+</code></pre></div><p>How you deal with outliers is a topic worthy of its own chapter; however, if you want to simply remove an outlier or replace it with the sample mean or median then I recommend the <code>rm.outlier</code> function provided also by the <code>outliers</code> package.</p>
+<br>
+<h3 id="categorical">Categorical variables</h3>
+<p>Common forms of descriptive statistics for categorical data typically include the following variances of contingency tables:</p>
+<h4 id="frequencies">Frequency Tables</h4>
+<p>To produce contingency tables which calculate counts for each combination of categorical variables we can use R’s <code>table()</code> function. For instance, we may want to get the total count of observations that fall into each cylinder category.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># counts for cylinders</span>
+<span style="color:#a6e22e">table</span>(mtcars<span style="color:#f92672">$</span>cyl)
+<span style="color:#75715e">## </span>
+<span style="color:#75715e">##  4  6  8 </span>
+<span style="color:#75715e">## 11  7 14</span>
+</code></pre></div><p>If we want to understand the number of observations by cylinders <em>and</em> carburetors we can produce a cross classification table:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># cross classification counts for cylinders by carburetors</span>
+<span style="color:#a6e22e">table</span>(mtcars<span style="color:#f92672">$</span>cyl, mtcars<span style="color:#f92672">$</span>carb)
+<span style="color:#75715e">##    </span>
+<span style="color:#75715e">##     1 2 3 4 6 8</span>
+<span style="color:#75715e">##   4 5 6 0 0 0 0</span>
+<span style="color:#75715e">##   6 2 0 0 4 1 0</span>
+<span style="color:#75715e">##   8 0 4 3 6 0 1</span>
+</code></pre></div><p>There are also functions such as <code>ftable</code> that allows us to create three-plus dimensional contingency tables. In this case we assess the count of observations by cylinder, carburetors, <em>and</em> transmission (0 = automatic, 1 = manual):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">table1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">table</span>(mtcars<span style="color:#f92672">$</span>am, mtcars<span style="color:#f92672">$</span>cyl, mtcars<span style="color:#f92672">$</span>carb)
+<span style="color:#a6e22e">ftable</span>(table1)
+<span style="color:#75715e">##      1 2 3 4 6 8</span>
+<span style="color:#75715e">##                 </span>
+<span style="color:#75715e">## 0 4  1 2 0 0 0 0</span>
+<span style="color:#75715e">##   6  2 0 0 2 0 0</span>
+<span style="color:#75715e">##   8  0 4 3 5 0 0</span>
+<span style="color:#75715e">## 1 4  4 4 0 0 0 0</span>
+<span style="color:#75715e">##   6  0 0 0 2 1 0</span>
+<span style="color:#75715e">##   8  0 0 0 1 0 1</span>
+</code></pre></div><h4 id="proportions">Proportions Tables</h4>
+<p>We can also produce contingency tables that present the proportions (percentages) of each category or combination of categories. To do this we simply feed the frequency tables produced by <code>table()</code> to the <code>prop.table()</code> function. The following reproduces the previous tables but calculates the proportions rather than counts.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(magrittr)
+
+<span style="color:#75715e"># counts for cylinders</span>
+<span style="color:#a6e22e">table</span>(mtcars<span style="color:#f92672">$</span>cyl) <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">prop.table</span>()
+<span style="color:#75715e">## </span>
+<span style="color:#75715e">##       4       6       8 </span>
+<span style="color:#75715e">## 0.34375 0.21875 0.43750</span>
+
+<span style="color:#75715e"># cross classification counts for cylinders by carburetors</span>
+<span style="color:#a6e22e">table</span>(mtcars<span style="color:#f92672">$</span>cyl, mtcars<span style="color:#f92672">$</span>carb) <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">prop.table</span>()
+<span style="color:#75715e">##    </span>
+<span style="color:#75715e">##           1       2       3       4       6       8</span>
+<span style="color:#75715e">##   4 0.15625 0.18750 0.00000 0.00000 0.00000 0.00000</span>
+<span style="color:#75715e">##   6 0.06250 0.00000 0.00000 0.12500 0.03125 0.00000</span>
+<span style="color:#75715e">##   8 0.00000 0.12500 0.09375 0.18750 0.00000 0.03125</span>
+
+<span style="color:#75715e"># cross classification of cylinder, carburetors, *and* transmission</span>
+<span style="color:#a6e22e">table</span>(mtcars<span style="color:#f92672">$</span>am, mtcars<span style="color:#f92672">$</span>cyl, mtcars<span style="color:#f92672">$</span>carb) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">prop.table</span>() <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">ftable</span>()
+<span style="color:#75715e">##            1       2       3       4       6       8</span>
+<span style="color:#75715e">##                                                     </span>
+<span style="color:#75715e">## 0 4  0.03125 0.06250 0.00000 0.00000 0.00000 0.00000</span>
+<span style="color:#75715e">##   6  0.06250 0.00000 0.00000 0.06250 0.00000 0.00000</span>
+<span style="color:#75715e">##   8  0.00000 0.12500 0.09375 0.15625 0.00000 0.00000</span>
+<span style="color:#75715e">## 1 4  0.12500 0.12500 0.00000 0.00000 0.00000 0.00000</span>
+<span style="color:#75715e">##   6  0.00000 0.00000 0.00000 0.06250 0.03125 0.00000</span>
+<span style="color:#75715e">##   8  0.00000 0.00000 0.00000 0.03125 0.00000 0.03125</span>
+</code></pre></div><p>You probably noticed something you haven&rsquo;t seen before - <code>%&gt;%</code>.  This is called the pipe operator and it is provided by the <code>magrittr</code> package.  This simply allows us to pipe an output from one function directly into the next.  You&rsquo;ll learn more about the pipe operator later in this class. In the meantime if you want to learn more about this very useful tool now you can check out the <a href="pipe">Simplify Your Code with %&gt;% tutorial</a>.</p>
+<p>We can add <code>round()</code> after <code>prop.table()</code> to round our values to a specified decimal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># percentages of observations by cylinders</span>
+<span style="color:#a6e22e">table</span>(mtcars<span style="color:#f92672">$</span>cyl) <span style="color:#f92672">%&gt;%</span> 
+  <span style="color:#a6e22e">prop.table</span>() <span style="color:#f92672">%&gt;%</span> 
+  <span style="color:#a6e22e">round</span>(<span style="color:#ae81ff">2</span>)
+<span style="color:#75715e">## </span>
+<span style="color:#75715e">##    4    6    8 </span>
+<span style="color:#75715e">## 0.34 0.22 0.44</span>
+
+<span style="color:#75715e"># percentages of observations by cylinders and carburetors</span>
+<span style="color:#a6e22e">table</span>(mtcars<span style="color:#f92672">$</span>cyl, mtcars<span style="color:#f92672">$</span>carb) <span style="color:#f92672">%&gt;%</span> 
+  <span style="color:#a6e22e">prop.table</span>() <span style="color:#f92672">%&gt;%</span> 
+  <span style="color:#a6e22e">round</span>(<span style="color:#ae81ff">2</span>)
+<span style="color:#75715e">##    </span>
+<span style="color:#75715e">##        1    2    3    4    6    8</span>
+<span style="color:#75715e">##   4 0.16 0.19 0.00 0.00 0.00 0.00</span>
+<span style="color:#75715e">##   6 0.06 0.00 0.00 0.12 0.03 0.00</span>
+<span style="color:#75715e">##   8 0.00 0.12 0.09 0.19 0.00 0.03</span>
+
+<span style="color:#75715e"># percentages of observations by cylinder, carburetors, *and* transmission</span>
+<span style="color:#a6e22e">table</span>(mtcars<span style="color:#f92672">$</span>am, mtcars<span style="color:#f92672">$</span>cyl, mtcars<span style="color:#f92672">$</span>carb) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">prop.table</span>() <span style="color:#f92672">%&gt;%</span> 
+  <span style="color:#a6e22e">round</span>(<span style="color:#ae81ff">2</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">ftable</span>()
+<span style="color:#75715e">##         1    2    3    4    6    8</span>
+<span style="color:#75715e">##                                   </span>
+<span style="color:#75715e">## 0 4  0.03 0.06 0.00 0.00 0.00 0.00</span>
+<span style="color:#75715e">##   6  0.06 0.00 0.00 0.06 0.00 0.00</span>
+<span style="color:#75715e">##   8  0.00 0.12 0.09 0.16 0.00 0.00</span>
+<span style="color:#75715e">## 1 4  0.12 0.12 0.00 0.00 0.00 0.00</span>
+<span style="color:#75715e">##   6  0.00 0.00 0.00 0.06 0.03 0.00</span>
+<span style="color:#75715e">##   8  0.00 0.00 0.00 0.03 0.00 0.03</span>
+</code></pre></div><h4 id="margins">Margins Tables</h4>
+<p>Margins show the total counts or percentages across columns or rows in a contingency table. For instance, if we go back to the cross classification counts for cylinders and carburetors:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">table</span>(mtcars<span style="color:#f92672">$</span>cyl, mtcars<span style="color:#f92672">$</span>carb)
+<span style="color:#75715e">##    </span>
+<span style="color:#75715e">##     1 2 3 4 6 8</span>
+<span style="color:#75715e">##   4 5 6 0 0 0 0</span>
+<span style="color:#75715e">##   6 2 0 0 4 1 0</span>
+<span style="color:#75715e">##   8 0 4 3 6 0 1</span>
+</code></pre></div><p>We can compute and add the column and row margins with <code>addmargins()</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">table</span>(mtcars<span style="color:#f92672">$</span>cyl, mtcars<span style="color:#f92672">$</span>carb) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">addmargins</span>()
+<span style="color:#75715e">##      </span>
+<span style="color:#75715e">##        1  2  3  4  6  8 Sum</span>
+<span style="color:#75715e">##   4    5  6  0  0  0  0  11</span>
+<span style="color:#75715e">##   6    2  0  0  4  1  0   7</span>
+<span style="color:#75715e">##   8    0  4  3  6  0  1  14</span>
+<span style="color:#75715e">##   Sum  7 10  3 10  1  1  32</span>
+</code></pre></div><p>We may want to understand the marginal distribution by row or column.  For example, we may want to understand what the distribution of observations of cylinders across carburetors.  In other words, for each carburetor level, what percent are 4, 6, and 8 cylinders. We can use the <code>prop.table</code> function we saw earlier and incorporate the <code>margin</code> argument.  <code>margin = 2</code> will provide the distribution of cylinders for each carburetor level.  Here we see that for vehicles with 1 carburetor, 71% are 4 cylinder and 29% are 6 cylinder.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">table</span>(mtcars<span style="color:#f92672">$</span>cyl, mtcars<span style="color:#f92672">$</span>carb) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">prop.table</span>(margin <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">round</span>(<span style="color:#ae81ff">2</span>)
+<span style="color:#75715e">##    </span>
+<span style="color:#75715e">##        1    2    3    4    6    8</span>
+<span style="color:#75715e">##   4 0.71 0.60 0.00 0.00 0.00 0.00</span>
+<span style="color:#75715e">##   6 0.29 0.00 0.00 0.40 1.00 0.00</span>
+<span style="color:#75715e">##   8 0.00 0.40 1.00 0.60 0.00 1.00</span>
+</code></pre></div><p>Alternatively, <code>margin = 1</code> will provide the row-wise distribution (i.e. how carburetors are distributed across cylinders).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">table</span>(mtcars<span style="color:#f92672">$</span>cyl, mtcars<span style="color:#f92672">$</span>carb) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">prop.table</span>(margin <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">round</span>(<span style="color:#ae81ff">2</span>)
+<span style="color:#75715e">##    </span>
+<span style="color:#75715e">##        1    2    3    4    6    8</span>
+<span style="color:#75715e">##   4 0.45 0.55 0.00 0.00 0.00 0.00</span>
+<span style="color:#75715e">##   6 0.29 0.00 0.00 0.57 0.14 0.00</span>
+<span style="color:#75715e">##   8 0.00 0.29 0.21 0.43 0.00 0.07</span>
+</code></pre></div><br>
+<h2 id="wrapping-up">Wrapping up</h2>
+<p>These initial bits of information of your data are primarily for your own benefit.  You do not always report these in your studies in this manner but you should always report the number of variables, what the variables are, how they are coded, the number of observations, and the number of missing values in your data. This is typically done in the <em>Data Preparation</em> section of your report (I will be looking for this info in your final report!).</p>
+<br>
+<h2 id="exercises">Exercises</h2>
+<p>Using the built-in <code>airquality</code> data set, answer the following questions:</p>
+<ol>
+<li>What are the dimensions of this data set?</li>
+<li>What are the variable names?</li>
+<li>What type of data are each variable recorded as?  Can you change the <em>Month</em> variable to a factor?</li>
+<li>How many missing values are in this data set?  Which columns are these missing values concentrated in? Omit all rows with missing observations (reference <a href="missing_values">Dealing with Missing Values tutorial</a>).</li>
+<li>What is the mean, median, standard deviation, and 85th percentile for <em>Temp</em>?</li>
+<li>How many observations in the <em>Temp</em> variable are beyond 2 standard deviations from the mean?</li>
+<li>Which <em>Month</em>s are represented and how many observations are in each one? Are the percentage of observations in each month approximately equal?</li>
+</ol>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/data-wrangling/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/data-wrangling/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="/data-wrangling/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-242S1L7JCL"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-242S1L7JCL', { 'anonymize_ip': false });
+}
+</script>
+
+  </body>
+</html>
+
