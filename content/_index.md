@@ -83,8 +83,8 @@ All required classroom material will be provided in class or online. Any recomme
 Course grades will consist of: 
 
 - 20% Homework assignments (4 equally weighted assignments)
-- 20% [Mid-term Project Evaluation](data_wrangling/mid-term)
-- 50% [Final Project](data_wrangling/final-project)
+- 20% [Mid-term Project Evaluation]()
+- 50% [Final Project]()
 - 10% [Engagement](data_wrangling/engagement)
 - There will be no in-class final exam
 
