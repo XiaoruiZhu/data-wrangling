@@ -4,6 +4,7 @@ title: Data Wrangling with R
 theme: hugo-lithium
 googleAnalytics: 'G-242S1L7JCL'
 disqusShortname: ''
+publishDir: "doc"
 ignoreFiles:
   - \.Rmd$
   - \.Rmarkdown$
