@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/schedule/</loc>
+    <loc>https://xiaoruizhu.github.io/data-wrangling/schedule/</loc>
     <lastmod>2021-10-17T23:22:11+00:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>https://xiaoruizhu.github.io/data-wrangling/</loc>
     <lastmod>2021-10-17T23:08:24+00:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://xiaoruizhu.github.io/data-wrangling/categories/</loc>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://xiaoruizhu.github.io/data-wrangling/tags/</loc>
   </url>
 </urlset>
