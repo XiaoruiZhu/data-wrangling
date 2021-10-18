@@ -6,7 +6,7 @@ title: Week 1 (October 18)
 Welcome to week 1! Although we will not meet in class until the end of this week (Monday, October 18<sup>th</sup>), I do not want to waste time in getting started. We only have 7 weeks together (&#x1f622;) so I want to pack each week as full as possible. I am assuming you have fully read the syllabus by now but if not please do so that you understand how this class is structured and what is expected of you.  I will spend the first few minutes of class on Monday re-iterating a few points so that we are all on the same page but I do not want to spend 30-60 minutes doing so, so make sure you read (and re-read) it thoroughly.
 
 
-Please download this material for Monday's class:
+Please download the materials for Monday's class:
 
 
 | Title                     | Handouts  |
@@ -16,6 +16,8 @@ Please download this material for Monday's class:
 | **Coding exercises**          | [**pdf**](coding_exercises_1.pdf) |
 | **Customer churn data**  | [**Data**](customer_churn_data_cleaning.csv) |
 | **Cincy crimes data** | [**Data**](week1_cincy_crimes.csv) |
+| **Homework 1** | [**Data**](homework_1.pdf) |
+
 
 The focus of this week is two-fold:
 
