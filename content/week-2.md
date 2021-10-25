@@ -24,8 +24,8 @@ Please download the materials for Monday's class:
 | **Lecture 02-B**          | [**Slides**](02b_slides_BANA7025.pdf) |
 | **Coding exercises**          | [**pdf**](coding-exercises.pdf) |
 | **Aircraft data**  | [**Data**](aircraft.csv) |
-| **RMarkdown Demonstration Text** | [**Doc**](RMarkdown Demonstration Text.docx) |
-| **RMarkdown Demonstration Code** | [**Code**](RMarkdown Demonstration Text.R) |
+| **RMarkdown Demonstration Text** | [**Doc**](RMarkdown-Demonstration-Text.docx) |
+| **RMarkdown Demonstration Code** | [**Code**](RMarkdown-Demonstration-Text.R) |
 | **Homework 2** | [**Instruction**](homework_2.pdf) |
 
 
