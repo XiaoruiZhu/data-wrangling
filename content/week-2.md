@@ -47,7 +47,7 @@ Below outlines the readings that you need to review and the assignments you need
 - BEFORE next week's class on March 28th, read Chapter 12 sections 12.1 through 12.5 of [R for Data Science](https://r4ds.had.co.nz/).
 - BEFORE next week's class on March 28th, read Chapter 5 sections 5.1 through 5.4 of [R for Data Science](https://r4ds.had.co.nz/).
 - As you read, check your answers for the guided reading with [this solutions manual](https://jrnold.github.io/r4ds-exercise-solutions/).
-- On the [course website](http://uc-r.github.io/data_wrangling), read the pages for the midterm and final project.
+- On the [course website](https://xiaoruizhu.github.io/data-wrangling/), read the pages for the midterm and final project.
 
 
 <hr>
