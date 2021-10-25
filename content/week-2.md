@@ -23,10 +23,11 @@ Please download the materials for Monday's class:
 | **Lecture 02-A**          | [**Slides**](02a_slides_BANA7025.pdf) |
 | **Lecture 02-B**          | [**Slides**](02b_slides_BANA7025.pdf) |
 | **Coding exercises**          | [**pdf**](coding-exercises.pdf) |
-| **Aircraft data**  | [**Data**](aircraft.csv) |
+| **Aircraft data**  | [**Data**](aircraft.xlsx) |
 | **RMarkdown Demonstration Text** | [**Doc**](RMarkdown-Demonstration-Text.docx) |
-| **RMarkdown Demonstration Code** | [**Code**](RMarkdown-Demonstration-Text.R) |
+| **RMarkdown Demonstration Code** | [**Code**](RMarkdown-Demonstration-Code.R) |
 | **Homework 2** | [**Instruction**](homework_2.pdf) |
+| **Justin_Jodrey bio** | [**Bio**](Justin_Jodrey.html) |
 
 
 Consequently, this week will give you a strong foundation for the different ways to get your data into R and understanding the basics of your data set. This will prepare you for your first challenge in completing your course project - that of *acquiring* your data!
