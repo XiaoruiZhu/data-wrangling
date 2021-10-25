@@ -59,7 +59,7 @@ All required classroom material will be provided in class or online. Any recomme
 | **1**         | [**Introduction**](week-1) &nbsp;&nbsp; <a href="https://xiaoruizhu.github.io/data-wrangling/week-1" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 |               | Intro to data wrangling, R, and course outline  |
 |               | Base R |
-| **2**         | **Reproducible Documents and Importing Data** &nbsp;&nbsp; <a href="https://xiaoruizhu.github.io/data-wrangling/week-2" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
+| **2**         | [**Reproducible Documents and Importing Data**](week-2) &nbsp;&nbsp; <a href="https://xiaoruizhu.github.io/data-wrangling/week-2" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
 |               | Managing your workflow and reproducibility  |
 |               | Importing data and understanding the basics of it |
 | **3**         | **Tidy Data and Data Manipulation** &nbsp;&nbsp; <a href="https://xiaoruizhu.github.io/data-wrangling/week-3" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |

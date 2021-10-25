@@ -35,16 +35,12 @@ Available data sets include:
 You can choose from one of the following four data sets.  Each dataset has its own challenges and strengths.
 
 - Petfinder.com Dog Data
-  * [Click here](https://www.dropbox.com/sh/xlkz0ns0wvy6ohk/AABsSkAnNYcX5B-chu_fgf99a?dl=1) to download the data.
   * Information about the data can be found [here](https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-12-17)
 - Hotel Bookings Data
-  * [Click here](https://www.dropbox.com/sh/qwdaldzkp8yrqwj/AADTj_WQcuKA0bsEeCKU__98a?dl=1) to download the data.
   * Information about the data can be found [here](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-02-11/readme.md)
 - NFL Attendance Data
-  * [Click here](https://www.dropbox.com/sh/q5a07l8yynlgwa7/AADwJykQfJLSSRZsfzLh2ylsa?dl=1) to download the data.
   * Information about the data can be found [here](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-02-04/readme.md)
 - Spotify Genre Data
-  * [Click here](https://www.dropbox.com/sh/qj0ueimxot3ltbf/AACzMOHv7sZCJsj3ErjtOG7ya?dl=1) to download the data
   * Information about the data can be found [here](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-01-21/readme.md)
 
 *Note*: Your homework group members may or may not all select the same dataset.  If members in your peer group select the same dataset, your work should reflect an individual/pair effort.  The Lindner College of Business academic integrity policy applies here.
@@ -142,7 +138,7 @@ Although each data set's data dictionary contains some additional questions wort
 <p>
   <em>Total possible points: 50</em> 
   <br>
-  <em>Due no later than: Sunday, April 26, 2019, 11:59PM ET</em>
+  <em>Due no later than: Friday, Dec 3, 2021, 11:59PM ET</em>
 </p>
 </div>
 
