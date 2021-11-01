@@ -41,7 +41,7 @@ Please download the materials for Monday's class:
 | **Lecture 03-B**          | [**Slides**](03B_slides_BANA7025.pdf) |
 | **Midterm project instruction**          | [**pdf**](coding_exercises_midterm_project.pdf) |
 | **Data**  | [**Data**](data.zip) |
-| **MBTA exercise**          | [**pdf**](MBTA_exercise.pdf) |
+| **MBTA exercise**          | [**pdf**](MBTA_Exercise.pdf) |
 
 
 In addition, be sure to have identified which data you are going to use for your final project.  Be sure to have access to this data because you will work on it during class.  Furthermore, identify at least 10 specific questions you want to ask of your project data. Using what you learned this week, what type of data transformations do you need to make to help answer these questions? Be ready to use dplyr to answer these questions in class.
