@@ -5,7 +5,7 @@ title: Final Project
 
 ### Purpose
 
-The purpose of this **individual/pair** final project is to put to work the tools and knowledge that you gain throughout this course. This provides you with multiple benefits. 
+The purpose of this **individual/group** final project is to put to work the tools and knowledge that you gain throughout this course. This provides you with multiple benefits. 
 
 1. It will provide you with more experience using data wrangling tools on real life data sets. 
 2. It helps you become a self-directed learner. As a data scientist, a large part of your job is to self-direct your learning and interests to find unique and creative ways to find insights in data.
@@ -43,7 +43,7 @@ You can choose from one of the following four data sets.  Each dataset has its o
 - Spotify Genre Data
   * Information about the data can be found [here](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-01-21/readme.md)
 
-*Note*: Your homework group members may or may not all select the same dataset.  If members in your peer group select the same dataset, your work should reflect an individual/pair effort.  The Lindner College of Business academic integrity policy applies here.
+*Note*: Your homework group members may or may not all select the same dataset.  If members in your peer group select the same dataset, your work should reflect an individual/group effort.  The Lindner College of Business academic integrity policy applies here.
  
 ### Project Report
 
