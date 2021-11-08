@@ -65,7 +65,7 @@ All required classroom material will be provided in class or online. Any recomme
 | **3**         | [**Tidy Data and Data Manipulation**](https://xiaoruizhu.github.io/data-wrangling/week-3/) &nbsp;&nbsp; <a href="https://xiaoruizhu.github.io/data-wrangling/week-3" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
 |               | Tidying & preparing data for analysis |
 |               | Data manipulation
-| **4**         | **Relational Data and More Tidyverse Packages** &nbsp;&nbsp; <a href="https://xiaoruizhu.github.io/data-wrangling/week-4" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
+| **4**         | [**Relational Data and More Tidyverse Packages**](https://xiaoruizhu.github.io/data-wrangling/week-4/) &nbsp;&nbsp; <a href="https://xiaoruizhu.github.io/data-wrangling/week-4" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a> |
 |               | Relational data |
 |               | Leveraging the Tidyverse to simplify data wrangling |
 | **5**         | **Data Visualizations** &nbsp;&nbsp; <a href="https://xiaoruizhu.github.io/data-wrangling/week-5" style="color:black;"><i class="fa fa-folder-open" style="font-size:1em"></i></a>  |
