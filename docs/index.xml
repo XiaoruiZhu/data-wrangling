@@ -86,5 +86,14 @@ Specifically, this week you are going to learn:
 Furthermore, it’s rare that a data analysis involves only a single table of data. Typically you have many tables of data, and you must combine them to answer the questions that you’re interested in.</description>
     </item>
     
+    <item>
+      <title>Week 5 (Nov 15)</title>
+      <link>https://xiaoruizhu.github.io/data-wrangling/week-5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiaoruizhu.github.io/data-wrangling/week-5/</guid>
+      <description>Being able to create visualizations (graphical representations) of data is a key step in data analysis. In this module you will learn to use the ggplot2 library to visualize your data. As illustrated in week 2, R does provide built-in plotting functions; however, the ggplot2 library implements what is known as the Grammar of Graphics. This makes it particularly effective for describing how visualizations should represent data, and has turned it into the preeminent plotting library in R.</description>
+    </item>
+    
   </channel>
 </rss>
