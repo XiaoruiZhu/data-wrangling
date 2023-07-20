@@ -1,4 +1,4 @@
-baseurl: https://xiaoruizhu.github.io/data-wrangling/
+baseurl: https://xiaorui.site/data-wrangling/
 languageCode: en-us
 title: Data Wrangling with R
 theme: hugo-lithium
@@ -16,7 +16,7 @@ menu:
     - name: Schedule
       url: /schedule/
     - name: Xiaorui Zhu
-      url: https://homepages.uc.edu/~zhuxr/
+      url: https://xiaorui.site/
 params:
   MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs
   MathJaxVersion: 2.7.5
